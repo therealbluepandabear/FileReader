@@ -3,11 +3,14 @@
 #include <direct.h>
 
 int main() {
-    std::ofstream MyFile;
 
     std::ofstream o("C:/Users/TO/Documents/Hi/pog.txt");
 
-    o << std::to_string(rand()) << std::endl;
+    for (int i = 0; i < 1000; i++) {
+        o << std::to_string(rand()) << std::endl;
+    }
+
+    o.close();
 
     return 0;
 }
