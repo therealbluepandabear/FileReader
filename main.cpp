@@ -1,9 +1,7 @@
 #include <iostream>
 #include <fstream>
-#include <direct.h>
 
-int main() {
-
+void write() {
     std::ofstream o("C:/Users/TO/Documents/Hi/pog.txt");
 
     for (int i = 0; i < 1000; i++) {
@@ -11,6 +9,23 @@ int main() {
     }
 
     o.close();
+}
+
+void read() {
+    std::string myText;
+
+    std::ifstream r("C:/Users/TO/Documents/Hi/pog.txt");
+
+    while (getline (r, myText)) {
+        std::cout << myText;
+    }
+
+    r.close();
+}
+int main() {
+
+    write();
+    read();
 
     return 0;
 }
